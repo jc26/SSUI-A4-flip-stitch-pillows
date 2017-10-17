@@ -1,0 +1,30 @@
+{
+  "couchPillow": {
+    "id": 1,
+    "name": "Couch Pillow",
+    "image": "https://s3-us-west-2.amazonaws.com/flip-stitch-pillows/couch_pillow.JPG",
+    "price": "$14.99",
+    "description": "The fabric is 100% cotton. It is filled with down and feather with a the filling weight of 25oz. It features a unique double layered fabric design and suited for use in indoor or outdoor shams."
+  },
+  "bedPillow": {
+    "id": 2,
+    "name": "Bed Pillow",
+    "image": "https://s3-us-west-2.amazonaws.com/flip-stitch-pillows/bed_pillow.jpeg",
+    "price": "$19.99",
+    "description": "Medium firmness typically designed for back and some side sleepers. Double layered fabric design providing the comfort you deserve. The outer fabric is 100% cotton. Fill with feather and down. This bed pillow giving you the right support."
+  },
+  "floorPoufPillow": {
+    "id": 3,
+    "name": "Floor Pouf Pillow",
+    "image": "https://s3-us-west-2.amazonaws.com/flip-stitch-pillows/floor_pouf.jpg",
+    "price": "$25.99",
+    "description": "Filled & Stuffed Floor Cushion. Yoga Pillow. Indian Vintage Kantha Saree Patchwork."
+  },
+  "roundPillow": {
+    "id": 4,
+    "name": "Round Pillow",
+    "image": "https://s3-us-west-2.amazonaws.com/flip-stitch-pillows/round_pillow.jpeg",
+    "price": "$15.99",
+    "description": "Comfortable for the bed yet stylish for the living room. 5 lbs of 3D Microfiber filling. 100% Cotton zippered pillow case that is machine washable. 42 inches in Length by 9 inches in diameter."
+  }
+}
