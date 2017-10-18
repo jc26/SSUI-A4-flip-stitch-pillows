@@ -3,6 +3,8 @@
   font-family: 'Lato', sans-serif;
 }
 
+/* Nav Bar */
+
 .nav-bar {
   width: 100%;
 }
@@ -44,6 +46,125 @@
   margin-right: 3%;
   cursor: pointer;
 }
+
+#items-num {
+  position: absolute;
+  right: 3.7%;
+  margin-top: 0.2%;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.nav-bar #yellow-rect {
+  background-color: #FAFF00;
+  width: 90px;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  margin-top: -8px;
+  z-index: -1;
+}
+
+.dropdown-cart {
+  display: none;
+  position: absolute;
+  right: 3.2%;
+  margin-top: 3.1%;
+  background-color: #f9f9f9;
+  width: 250px;
+  max-height: 350px;
+  overflow-y: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  z-index: 1;
+  padding: 0 10px 0 10px;
+}
+
+.dropdown-cart .drop-title {
+  display: inline-block;
+}
+
+.dropdown-cart .drop-title p.drop-total {
+  float:left;
+  margin-right: 125px;
+}
+
+.dropdown-cart .drop-title p.drop-total span.total-cost {
+  font-weight: 700;
+}
+
+.dropdown-cart .drop-title .ci-checkout-btn {
+  background-color: #4F72F0;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 8px 5px 8px 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 10px;
+  cursor: pointer;
+  float: right;
+  margin-top: -40px;
+}
+
+.dropdown-cart p.dropdown-no-items {
+  font-size: 12px;
+  text-align: center;
+}
+
+.dropdown-cart hr {
+  background-color: gray;
+  margin-top: -7px;
+}
+
+.dropdown-cart ul.cart-items {
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.dropdown-cart ul.cart-items li img {
+  float: left;
+  width: 25%;
+  margin-right: 10px;
+}
+
+.dropdown-cart ul.cart-items li div.ci-info p.ci-name {
+  padding-top: 10px;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dropdown-cart ul.cart-items li div.ci-info div.ci-small-info {
+  display: inline-block;
+  margin-top: -25px;
+}
+
+.dropdown-cart ul.cart-items li div.ci-info div.ci-small-info p.ci-qty {
+  float: left;
+  font-size: 12px;
+}
+
+.dropdown-cart ul.cart-items li div.ci-info div.ci-small-info p.ci-sub {
+  margin-left: 10px;
+  float: right;
+  font-size: 12px;
+}
+
+.dropdown-cart a:hover {
+  background-color: #f1f1f1
+}
+
+.cart:hover .dropdown-cart {
+  display: block;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Main Body */
 
 .main-body {
   margin: 100px 30px 0 30px;
@@ -272,24 +393,6 @@ table.details-table td.details-info textarea#custom-text {
   border: 1px solid #ccc;
   border-radius: 8px;
   resize: none;
-}
-
-#items-num {
-  position: absolute;
-  right: 3.7%;
-  margin-top: 0.2%;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.nav-bar #yellow-rect {
-  background-color: #FAFF00;
-  width: 90px;
-  height: 50px;
-  position: absolute;
-  right: 0;
-  margin-top: -8px;
-  z-index: -1;
 }
 
 /* shopping cart styling */

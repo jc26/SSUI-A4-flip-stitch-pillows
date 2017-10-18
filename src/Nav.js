@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './images/logo_web.svg';
 import cart_icon from './images/shopping-cart.svg';
+import NavDropdownItem from './NavDropdownItem.js';
 
 class Nav extends Component {
   render() {
@@ -15,11 +16,35 @@ class Nav extends Component {
     } else {
       cartActive = <div id="yellow-rect"></div>;
     }
-    // cartSize display
-
-    // var sizeStr = "";
-    // (size > 9) ? sizeStr = size.toString() : sizeStr = "0" + size.toString();
-    // html
+    // get cart and total
+    var cartItems = [];
+    var total = 0;
+    var cart = JSON.parse(localStorage.getItem("cart"));
+    for (var i = 0; i < cart.length; i++){
+      cartItems.push(<NavDropdownItem key={i} cartItem={cart[i]} />)
+      total += parseFloat(cart[i].subtotal.substring(1));
+    }
+    var cartDropdown = null;
+    if (cartItems.length === 0) {
+      cartDropdown = (
+        <div className="dropdown-cart">
+          <p className="dropdown-no-items">Add some items to your cart!</p>
+        </div>
+      );
+    } else {
+      cartDropdown = (
+        <div className="dropdown-cart">
+          <div className="drop-title">
+            <p className="drop-total">Total: <span className="total-cost">${total}</span></p>
+            <button className="ci-checkout-btn">CHECKOUT</button>
+          </div>
+          <hr />
+          <ul className="cart-items">
+            {cartItems}
+          </ul>
+        </div>
+      );
+    }
     return (
       <div className="nav-bar">
         <div id="nav-container">
@@ -34,8 +59,9 @@ class Nav extends Component {
               <a className="cart" onClick={this.props.goToCart}>
                 {cartActive}
                 <img id="cart-icon" src={cart_icon} alt="cart" />
+                <p id="items-num" onClick={this.props.goToCart}>{this.props.cartSize}</p>
+                {cartDropdown}
               </a>
-              <p id="items-num" onClick={this.props.goToCart}>{this.props.cartSize}</p>
             </li>
             <li><a className={"tab " + productsActive} onClick={this.props.goToProducts}>PRODUCTS</a></li>
             <li><a className={"tab " + homeActive} onClick={this.props.goToHome}>HOME</a></li>

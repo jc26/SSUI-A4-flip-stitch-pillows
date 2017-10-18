@@ -54,14 +54,25 @@ class Details extends Component {
   addToCart(item, qtyFunct) {
     if (this.state.shape !== "") {
       var cart = JSON.parse(localStorage.getItem("cart"));
-      var cartItem = {
-                      name: item.name + " - " + this.capitalize(this.state.shape),
-                      image: item.image,
-                      price: item.price,
-                      quantity: this.state.quantity,
-                      subtotal: "$" + (parseFloat(item.price.substring(1)) * this.state.quantity).toFixed(2)
-                     };
-      cart.push(cartItem);
+      var repeat = false;
+      var newName = item.name + " - " + this.capitalize(this.state.shape);
+      for (var i = 0; i < cart.length; i++){
+        if (newName === cart[i].name) {
+          cart[i].quantity += this.state.quantity;
+          cart[i].subtotal = "$" + (parseFloat(item.price.substring(1)) * cart[i].quantity).toFixed(2);
+          repeat = true;
+        }
+      }
+      if (!repeat) {
+        var cartItem = {
+                        name: newName,
+                        image: item.image,
+                        price: item.price,
+                        quantity: this.state.quantity,
+                        subtotal: "$" + (parseFloat(item.price.substring(1)) * this.state.quantity).toFixed(2)
+                       };
+        cart.push(cartItem);
+      }
       localStorage.setItem("cart", JSON.stringify(cart));
       var size = localStorage.getItem("size");
       localStorage.setItem("size", size + this.state.quantity);
