@@ -44,7 +44,7 @@ class Cart extends Component {
           <br />
           <div id="total-checkout">
             <div className="total">
-              <span className="txt">Total</span> &nbsp;&nbsp;<span id="total-price" className="num">{"$" + total}</span>
+              <span className="txt">Total</span> &nbsp;&nbsp;<span id="total-price" className="num">${total.toFixed(2)}</span>
             </div>
             <a className="checkout-btn">CHECKOUT</a>
           </div>

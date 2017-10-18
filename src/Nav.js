@@ -35,7 +35,7 @@ class Nav extends Component {
       cartDropdown = (
         <div className="dropdown-cart">
           <div className="drop-title">
-            <p className="drop-total">Total: <span className="total-cost">${total}</span></p>
+            <p className="drop-total">Total: <span className="total-cost">${total.toFixed(2)}</span></p>
             <button className="ci-checkout-btn">CHECKOUT</button>
           </div>
           <hr />
