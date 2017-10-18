@@ -2,19 +2,20 @@
   "name": "flip-stitch-pillows",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jc26.github.io/SSUI-A4-flip-stitch-pillows/",
   "dependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-scripts": "1.0.14",
-    "webpack": "^3.7.1"
+    "react-scripts": "1.0.14"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy" : "npm run build&&gh-pages -d build"
   },
   "devDependencies": {
-    "webpack-dev-server": "^1.9.0"
+    "gh-pages": "^1.0.0"
   }
 }
