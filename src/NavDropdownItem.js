@@ -4,7 +4,7 @@ class NavDropdownItem extends Component {
   render() {
     return (
       <li>
-        <img className="ci-img" src={this.props.cartItem.image} />
+        <img className="ci-img" src={this.props.cartItem.image} alt="Unavailable" />
         <div className="ci-info">
           <p className="ci-name">{this.props.cartItem.name}</p>
           <div className="ci-small-info">

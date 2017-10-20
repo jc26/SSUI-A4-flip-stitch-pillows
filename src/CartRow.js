@@ -8,7 +8,7 @@ class CartRow extends Component {
           <button id={this.props.id + "-btn"} className="rm-btn" type="button" onClick={() => this.props.deleteItem(this.props.id, this.props.changeQtyInCart)}>&times;</button>
         </td>
         <td className="cart-img">
-          <img className="item-img" src={this.props.item.image} />
+          <img className="item-img" src={this.props.item.image} alt="Unavailable" />
         </td>
         <td className="cart-name">{this.props.item.name}</td>
         <td className="cart-price">{this.props.item.price}</td>

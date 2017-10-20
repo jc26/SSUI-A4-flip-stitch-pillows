@@ -114,7 +114,7 @@ class Details extends Component {
           <tbody>
             <tr>
               <td className="details-img">
-                <img className="item-img" src={this.props.item.image} />
+                <img className="item-img" src={this.props.item.image} alt="Unavailable" />
                 <a id="add-btn" className="button" onClick={() => this.addToCart(this.props.item, this.props.changeQtyInCart)}>
                   ADD TO CART
                 </a>
