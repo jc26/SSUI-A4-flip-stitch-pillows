@@ -9,7 +9,7 @@ class Details extends Component {
     };
   }
 
-  selectOpt(id) {
+  selectOpt(id) { // selecting shape of item
     var selected = document.getElementById(id);
     var previous = document.getElementById(this.state.shape);
     if (this.state.shape === "custom") {

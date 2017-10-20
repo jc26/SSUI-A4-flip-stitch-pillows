@@ -9,7 +9,6 @@ import './App.css';
 class App extends Component {
   constructor() {
     super();
-    localStorage.clear(); //??
     localStorage.setItem("cart", JSON.stringify([]));
     this.state = {
       mainBody: <Home goToProducts={this.goToProducts.bind(this)} />,

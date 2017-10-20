@@ -25,7 +25,7 @@ class Nav extends Component {
       total += parseFloat(cart[i].subtotal.substring(1));
     }
     var cartDropdown = null;
-    if (cartItems.length === 0) {
+    if (cartItems.length === 0) { // no items in cart
       cartDropdown = (
         <div className="dropdown-cart">
           <p className="dropdown-no-items">Add some items to your cart!</p>
